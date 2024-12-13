@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Team Members:
+    - Ali Shahmoradi
+    - MohammadJavad Takallo
+    - Mohammad Nasiralvares
+    All rights reserved.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home-page">
+        <!-- Slider -->
+        <div id="slider-section">
+            <div id="slider-container" class="home-div">
+                <canvas id="sliderCanvas"></canvas>
+            </div>
+            <div id="slider-dots-container" class="slider-dots">
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+            </div>
+        </div>
+        <!-- categories -->
+        <div id="categories-movies-section">
+            <div id="category-list" class="home-div">
+                <div class="category-item active"><div>All</div></div>
+                <div class="category-item"><div>Most view</div></div>
+                <div class="category-item"><div>Popular</div></div>
+                <div class="category-item"><div>Recently viewed</div></div>
+            </div>
+            <!-- movieList -->
+            <div id="movies-section" class="home-div">
+                <h1 id="movies-title">Movies</h1>
+                <div id="movie-cards-container">
+                    <ul id="movieList">
+                        <!-- Movies list here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div id="navigation-section" class="home-div">
+            <div id="navbar-container">
+                <!-- Home Icon -->
+                <div class="icon-container active">
+                    <div class="icon-background"></div>
+                    <div>
+                        <img class="navbar-icon active" src="./Movie Line Icons/SVG/home.svg" alt="Home Icon" />
+                    </div>
+                </div>
+
+                <!-- Bookmark Icon -->
+                <div class="icon-container">
+                    <img class="navbar-icon" src="./Movie Line Icons/SVG/bookmark.svg" alt="Bookmark Icon" />
+                </div>
+
+                <!-- Search Icon -->
+                <div class="icon-container">
+                    <img class="navbar-icon" src="./Movie Line Icons/SVG/search.svg" alt="Search Icon" />
+                </div>
+
+                <!-- Profile Icon -->
+                <div class="icon-container">
+                    <img class="navbar-icon" src="./Movie Line Icons/SVG/user.svg" alt="Profile Icon" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./slider.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

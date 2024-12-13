@@ -1,0 +1,254 @@
+/* 
+Team Members:
+- Ali Shahmoradi
+- MohammadJavad Takallo
+- Mohammad Nasiralvares
+All rights reserved. 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #071013;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    font-family: Inter;
+}
+
+#home-page {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Slider */
+#slider-container {
+    justify-content: center;
+    height: 40vh;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #454545;
+}
+
+#slider-dots-container {
+    position: relative;
+    text-align: center;
+    margin-top: 0px; 
+}
+
+#sliderCanvas {
+    width: 100%;
+    height: 356px;
+}
+
+.slider-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    margin: 0 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: #3961FF;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Categories */
+#category-list {
+    display: flex;
+    gap: 9px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.category-item {
+    color: aliceblue;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 25px;
+    border-radius: 45px;
+    border: 2px solid;
+    border-color: #777777;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.category-item.active {
+    border-color: #3961FF;
+    font-weight: normal;
+}
+
+/* Movie Cards */
+#movies-section {
+    margin: 0 5%;
+    text-align: left;
+}
+
+#movie-cards-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+#movie-cards-container ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-card-item {
+    width: 124px;
+    height: 159px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #FFF;
+    background-color: #333;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.movie-card-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.movie-card-item .card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#movies-title {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Navbar */
+#navbar-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 98px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #121E22; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #454545;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70px;
+    height: 35px;
+    transition: width 0.3s ease;
+}
+
+.icon-container.active {
+    flex-direction: row;
+    width: 120px;
+    height: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.icon-background {
+    background-color: #3860ff;
+    border-radius: 38px;
+    filter: blur(22.2px);
+    width: 78px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.icon-label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    gap: 8px;
+    padding: 5px 20px;
+    border-radius: 45px;
+    background-color: #3961FF;
+    border-color: #777777;
+    white-space: nowrap;
+    font-weight: lighter;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+.navbar-icon.active {
+    width: 81px;
+    height: 35px;
+    color: #fff;
+}
+
+.navbar-icon-label {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    display: none;
+}
+
+.icon-container.active .navbar-icon-label {
+    display: inline;
+}
+#movieList{
+    color: #FFF;
+}
